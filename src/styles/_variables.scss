@@ -1,0 +1,39 @@
+// colors START
+
+$colors: (
+  bg: #f5ece2,
+  primary: #df130d,
+  secondary: #0a0908,
+);
+
+// colors END
+
+// fonts START
+
+$fonts: (
+  b1: 64,
+  b2: 56,
+  b3: 48,
+  b4: 32,
+  b5: 28,
+  md1: 24,
+  md2: 20,
+  md3: 18,
+  md4: 17,
+  sm1: 16,
+  sm2: 15,
+  sm3: 14,
+  xs1: 12,
+);
+
+// fonts END
+
+// responsive START
+
+$breakpoints: (
+  "mobile": "(max-width: 767px)",
+  "tablet": "(max-width: 991px)",
+  "landscape": "(max-width: 1199px)",
+);
+
+// responsive END

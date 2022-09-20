@@ -1,0 +1,26 @@
+.btn {
+  border: none;
+  background-color: color(primary);
+  padding: 18px 10px;
+  width: 176px;
+  color: color(bg);
+  transition: all 0.25s linear;
+  font-size: font(sm1);
+  font-family: "Northden";
+  font-weight: 400;
+  border: 1.5px solid color(primary);
+  cursor: pointer;
+
+  &.border {
+    background-color: color(bg);
+    color: color(primary);
+
+    &:hover{
+        background-color: darken(color(bg), 5); 
+    }
+  }
+
+  &:hover {
+    background-color: darken(color(primary), 5);
+  }
+}

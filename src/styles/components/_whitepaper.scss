@@ -1,0 +1,39 @@
+.whitepaper {
+  @extend %full;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &_blackbox {
+    width: 1008px;
+    height: 307px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    background-color: color(secondary);
+    &_title {
+      font-family: Northden;
+      font-size: font(b4);
+      color: color(bg);
+    }
+    &_sub_title {
+      font-family: Oswald-lighter;
+      font-size: font(sm3);
+      color: color(bg);
+    }
+    @include respond-to(mobile) {
+      align-items: flex-start;
+    }
+  }
+
+  &_blood {
+    position: absolute;
+    right: 105%;
+    @include respond-to(mobile) {
+      display: none;
+    }
+  }
+}

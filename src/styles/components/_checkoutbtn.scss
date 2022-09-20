@@ -1,0 +1,31 @@
+.checkoutbtn {
+  width: 154px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  background-color: color(primary);
+
+  margin-top: 48px;
+
+  @include respond-to(mobile) {
+    width: 100%;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &_title {
+    position: relative;
+    width: 85px;
+    height: 24px;
+    display: flex;
+    justify-content: space-around;
+    &_text {
+      font-family: Oswald-lighter;
+      color: color(bg);
+      font-size: font(sm3);
+    }
+  }
+}

@@ -1,0 +1,189 @@
+.welcome {
+  width: 100%;
+  min-height: 100vh;
+  height: 100vh;
+  padding-top: 104px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  &__top {
+    text-align: center;
+    width: 100%;
+    position: relative;
+  }
+
+  &__texts {
+    width: 100%;
+    font-family: "Northden";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 64px;
+    gap: 24px;
+    position: relative;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: font(b1);
+    line-height: 72px;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: font(sm1);
+    line-height: 18px;
+
+    & > span {
+      color: color(primary);
+    }
+  }
+
+  &__btns {
+    justify-content: center;
+    display: flex;
+    gap: 32px;
+  }
+
+  &__scroll {
+    &-img {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      opacity: 0.5;
+      & > div {
+        background-color: color(secondary);
+        @include w-h(4px, 8px);
+
+        &:nth-child(1) {
+          opacity: 0.2;
+        }
+        &:nth-child(2) {
+          opacity: 0.45;
+        }
+      }
+    }
+    &-title {
+      font-family: "NORTHDEN";
+      font-size: font(sm2);
+      line-height: 16px;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  &__blood {
+    position: absolute;
+    left: 100px;
+    top: 30px;
+  }
+
+  &__gun {
+    position: absolute;
+    left: 0;
+    top: 140px;
+  }
+  &__shot {
+    position: absolute;
+    right: 0;
+    top: 100px;
+  }
+
+  &__pattern {
+    width: 100%;
+    position: absolute;
+    bottom: -5px;
+    max-height: 58px;
+  }
+
+  @include respond-to(landscape) {
+    &__blood {
+      position: absolute;
+      left: 20px;
+      transform: scale(0.8);
+    }
+
+    &__gun {
+      top: 130px;
+      left: -45px;
+      @include w-h(460px , 437px);
+    }
+    &__shot {
+      right: -30px;
+      top: 150px;
+      @include w-h(357px , 327px);
+    }
+  }
+
+  @include respond-to(tablet) {
+    &__title {
+      font-weight: 400;
+      font-size: font(b3);
+      line-height: 62px;
+    }
+    &__pattern {
+      width: unset;
+    }
+    &__gun {
+      top: -200px;
+      left: -30px;
+      @include w-h(320px , 306px);
+    }
+    &__shot {
+      right: -70px;
+      top: 80px;
+      @include w-h(330px , 306px);
+
+    }
+  }
+  @include respond-to(mobile) {
+    padding: 0 16px;
+    justify-content: flex-start;
+    padding-top: 303px;
+    height: calc(100vh - 85px);
+
+    &__top {
+      text-align: left;
+    }
+
+    &__texts {
+      max-width: 357px;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 157px;
+    }
+
+    &__btns {
+      flex-direction: column;
+      gap: 8px;
+
+      & button {
+        width: 100%;
+      }
+    }
+
+    &__blood {
+      display: none;
+    }
+    &__gun {
+      top: -190px;
+      left: -70px;
+      @include w-h(300px , 286px);
+    }
+    &__shot {
+      right: -108px;
+      top: 50px;
+      @include w-h(277px , 255px);
+
+    }
+
+    &__scroll {
+      margin-top: 32px;
+      margin-bottom: 30px;
+    }
+  }
+}

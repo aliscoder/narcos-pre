@@ -1,0 +1,41 @@
+.footer {
+  position: relative;
+  &_inner {
+    border-top: 1px solid lighten(color(secondary), 80%);
+    display: flex;
+    padding: 48px 0;
+    justify-content: space-between;
+    align-items: center;
+
+    &_left {
+      display: flex;
+    }
+    &_center {
+      font-family: Oswald-lighter;
+      font-size: fonts(sm3);
+      @include respond-to(mobile) {
+        display: none;
+      }
+    }
+    &_right {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    @include respond-to(mobile) {
+      padding: 24px;
+    }
+  }
+
+  &_center_mobile {
+    font-family: Oswald-lighter;
+    font-size: fonts(sm3);
+    display: none;
+    @include respond-to(mobile) {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 24px;
+    }
+  }
+}
